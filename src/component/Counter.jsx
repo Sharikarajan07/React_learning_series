@@ -2,6 +2,7 @@ import React,{useState} from "react"
 function Counter(){
 
     const[count,setCount]=useState(0);
+    
     const handleadd = () =>{
         console.log("Adding count");
         setCount(count + 1);
