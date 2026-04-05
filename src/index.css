@@ -1,4 +1,46 @@
-.btn{
+/* .btn{
     color:azure;
     background-color: blue;
+} */
+
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    background:linear-gradient(100deg, #2f2b6f, #564fb6);
+    border-radius: 10px;
+    padding-right:20px;
+    padding-left:10px;
+    color:white;
+
+}
+.left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+.right{
+    display:flex;
+    gap:40px;   
+}
+.logo{
+    height:30px;
+    width:36px;
+    border-radius: 5px;
+}
+.search input{
+    width:400px;
+    height:15px;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+.right a{
+    text-decoration:none;
+    color: inherit;
+    font-weight:bold;
+    font-size: larger;
+}
+.right a:hover{
+    color: black;
 }
