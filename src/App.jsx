@@ -16,6 +16,9 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import Homepage from './component/moviestask/Homepage'
 import Moviespage from './component/moviestask/Moviespage'
+import Moviebook from './component/Moviebook';
+import {useState} from 'react';
+import React from 'react';
 
 function App() {
 
@@ -26,7 +29,27 @@ function App() {
   //     setislog(false)
   // }
 
+   const [moviedata,setmoviedata] =useState([
+        {
+            name:"INCEPTION",
+            rent:200
+        },
+        {
+            name:"PRESTIGE",
+            rent:150
+        },
+        {
+            name:"ROSLIN",
+            rent:100
+        },
+        {
+            name:"INTERSELLAR",
+            rent:150
+        }
+    ])
+
   return (
+    
     // <BrowserRouter>
       // <h1>Luffy</h1>
       // <h2>Sanji</h2> 
@@ -69,21 +92,37 @@ function App() {
     //     <Route path="/Contact" element={<Contact />} />
     //     <Route path="/About" element={<About />} />
 
+    <div>
+
+    {moviedata.map((da)=>(
+
+      <Moviebook rent ={da.rent} name={da.name} />
+
+    ))}
+    
+
+   
+
+    
+    </div>
+
+
+  
 
     //   </Routes>
-    <BrowserRouter>
+  //   <BrowserRouter>
 
       
-       <Routes>
-        <Route path='/' element={<Homepage />} />
-        <Route path='/movies' element={<Moviespage />} />
-       </Routes>
+  //      <Routes>
+  //       <Route path='/' element={<Homepage />} />
+  //       <Route path='/movies' element={<Moviespage />} />
+  //      </Routes>
   
 
 
     
 
-   </BrowserRouter>
+  //  </BrowserRouter>
   );
 }
 export default App

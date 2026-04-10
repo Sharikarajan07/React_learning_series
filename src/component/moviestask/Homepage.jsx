@@ -16,8 +16,8 @@ export default function Homepage() {
                 const response = await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`);
                 const data = await response.json();
 
-                setfeaturedmovie(data.results[5])
-                setrowmovie(data.results.slice(1, 25))
+                setfeaturedmovie(data.results[6])
+                setrowmovie(data.results.slice(1, 25))``
             } catch (error) {
                 console.error("Error fetching movies: ", error)
             }
