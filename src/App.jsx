@@ -19,6 +19,7 @@ import Moviespage from './component/moviestask/Moviespage'
 import Moviebook from './component/Moviebook';
 import {useState} from 'react';
 import React from 'react';
+import Todolist from './component/Todolist';
 
 function App() {
 
@@ -66,7 +67,7 @@ function App() {
       // {islog?<Lifecycle />:"u need login"} 
       //  <Userform />
       
-
+        
 
       //  <button onClick = {handlelogout}>logout</button> 
     //   <div className='navbar'>
@@ -92,19 +93,19 @@ function App() {
     //     <Route path="/Contact" element={<Contact />} />
     //     <Route path="/About" element={<About />} />
 
-    <div>
+    // <div>
 
-    {moviedata.map((da)=>(
+    // {moviedata.map((da)=>(
 
-      <Moviebook rent ={da.rent} name={da.name} />
+    //   <Moviebook rent ={da.rent} name={da.name} />
 
-    ))}
+    // ))}
     
 
    
 
     
-    </div>
+    // </div>
 
 
   
@@ -123,6 +124,9 @@ function App() {
     
 
   //  </BrowserRouter>
-  );
+  <Todolist />
+   );
+
+    
 }
 export default App
